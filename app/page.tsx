@@ -1,22 +1,25 @@
 //app/page.tsx
 import Image from "next/image"
+import { Playfair_Display } from 'next/font/google'
+
+const playfair = Playfair_Display({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FFF8E7]">
+    <main className={`min-h-screen bg-[#FFF8E7] ${playfair.className}`}>
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-8 text-center">
+      <section className="container mx-auto px-4 py-28 text-center">
         <div className="max-w-3xl mx-auto space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-amber-800">Reconforta</h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-amber-700">Coffee Catering</h2>
           <h3 className="text-amber-800 italic text-xl md:text-2xl">
-            "Porque cada momento merece ser especial"
+            &quot;Porque cada momento merece ser especial&quot;
           </h3>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div className="space-y-6">
@@ -30,7 +33,7 @@ export default function Home() {
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image
-                src="/images/food.png"
+                src="/images/catering-service.png"
                 alt="Servicio de Catering"
                 fill
                 className="object-cover"
@@ -42,7 +45,7 @@ export default function Home() {
           <div className="space-y-6">
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image
-                src="/images/catering-service.png"
+                src="/images/food.png"
                 alt="Presentación de Comida"
                 fill
                 className="object-cover"
@@ -91,3 +94,4 @@ export default function Home() {
     </main>
   )
 }
+

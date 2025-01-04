@@ -22,11 +22,6 @@ export default function Contactanos() {
     setIsSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
-    const data = {
-      nombre: formData.get('nombre'),
-      email: formData.get('email'),
-      mensaje: formData.get('mensaje'),
-    }
 
     // Simular envío del formulario
     await new Promise(resolve => setTimeout(resolve, 1000))
@@ -94,4 +89,3 @@ export default function Contactanos() {
     </main>
   )
 }
-
