@@ -52,11 +52,12 @@ export function Navigation() {
           </div>
 
           {/* Right Logo */}
-          <div className="relative w-12 h-12">
+          <div className="relative w-20 h-20">
             <Image
-              src="/logo-circle.png"
+              src="/images/logo-navbar.png"
               alt="Reconforta Logo"
               fill
+              priority
               className="object-contain"
             />
           </div>

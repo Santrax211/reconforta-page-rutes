@@ -21,7 +21,7 @@ export default function Contactanos() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(e.currentTarget)
+    //const formData = new FormData(e.currentTarget)
 
     // Simular envío del formulario
     await new Promise(resolve => setTimeout(resolve, 1000))
